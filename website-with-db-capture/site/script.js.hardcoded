@@ -1,0 +1,62 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const coursesData = [
+        {
+            name: "Introduction to React",
+            lectures: [
+                { number: 1, description: "Setting up the environment" },
+                { number: 2, description: "Components and Props" },
+                { number: 3, description: "State Management" }
+            ]
+        },
+        {
+            name: "Advanced React Concepts",
+            lectures: [
+                { number: 1, description: "Context API" },
+                { number: 2, description: "Hooks" },
+                { number: 3, description: "Redux" }
+            ]
+        }
+    ];
+
+    function displayCourses(courses) {
+        const coursesContainer = document.getElementById("courses");
+        courses.forEach(course => {
+            const courseElement = document.createElement("div");
+            courseElement.classList.add("mb-4", "p-4", "bg-white", "rounded-lg", "shadow-md");
+
+            const courseNameElement = document.createElement("h2");
+            courseNameElement.classList.add("text-xl", "font-semibold", "text-blue-700", "mb-2");
+            courseNameElement.textContent = course.name;
+            courseElement.appendChild(courseNameElement);
+
+            const tableElement = document.createElement("table");
+            tableElement.classList.add("table-auto", "w-full");
+
+            const tableHead = document.createElement("thead");
+            tableHead.classList.add("bg-blue-100");
+            tableHead.innerHTML = `
+                <tr>
+                    <th class="px-4 py-2 text-left text-blue-600">Lecture</th>
+                    <th class="px-4 py-2 text-left text-blue-600">Description</th>
+                </tr>
+            `;
+            tableElement.appendChild(tableHead);
+
+            const tableBody = document.createElement("tbody");
+            course.lectures.forEach(lecture => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td class="border px-4 py-2">${lecture.number}</td>
+                    <td class="border px-4 py-2">${lecture.description}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+            tableElement.appendChild(tableBody);
+
+            courseElement.appendChild(tableElement);
+            coursesContainer.appendChild(courseElement);
+        });
+    }
+
+    displayCourses(coursesData);
+});
