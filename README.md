@@ -18,3 +18,6 @@ Here's a brief description of the files in this repository.
 | [gemini-starter.ipynb](gemini-starter.ipynb) | Starter code using the gemini api. Don't forget to set up the API_KEY in a config.yaml as per instructions in the notebook. | 
 | [tool-calling-demo.ipynb](tool-calling-demo.ipynb) | This notebook shows how you can directly save the website generated using the prompt into files on your disk using a tool call. | 
 | [db-example.ipynb](db-example.ipynb) | This notebook shows a simple database creation using a prompt and saving it for further use using a tool calling feature | 
+| [pydantic.ipynb](pydantic.ipynb) | This notebook shows the basic pydantic data types | 
+| [fastapi-demo](fastapi-demo) | This folder shows a simple fastapi app which can do different types of GET, POST, UPDATE, DELETE operations | 
+| [website-with-db-capture](website-with-db-capture) | Here we see an example of the DB integration into the fastapi app to stitch the frontend with data coming from the database. This also introduces the "how to do cursor-style edits with API. | 
