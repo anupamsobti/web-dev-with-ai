@@ -21,3 +21,4 @@ Here's a brief description of the files in this repository.
 | [pydantic.ipynb](pydantic.ipynb) | This notebook shows the basic pydantic data types | 
 | [fastapi-demo](fastapi-demo) | This folder shows a simple fastapi app which can do different types of GET, POST, UPDATE, DELETE operations | 
 | [website-with-db-capture](website-with-db-capture) | Here we see an example of the DB integration into the fastapi app to stitch the frontend with data coming from the database. This also introduces the "how to do cursor-style edits with API. | 
+| [dlai-build-a-simple-agent.ipynb](dlai-build-a-simple-agent.ipynb) | This notebook is from the deeplearning.ai course on building agents with langgraph. It just demonstrates a simple agent from scratch. |
